@@ -1,5 +1,26 @@
-const MyMath = require('../myMath');
+// імпорт за замовчанням (ESModules)
+// import MyMathModule from './myMath.js';
 
-console.log('node examples index');
+// імпорт за замовчанням (CommonJS)
+const myMathExports = require('./myMath');
 
-module.exports.value = 'test';
+console.log(myMathExports);
+
+const nodeExamples  = require('./node_examples');
+
+// іменний імпорт (ESModules)
+// import { test, testFunc as newTestFuncName } from './myMath.js';
+
+// import * as MyMath from './myMath.js';
+
+// іменний імпорт (CommonJS)
+const { test, testFunc: myTestFunc } = require('./myMath');
+
+// console.log(MyMath);
+
+// newTestFuncName();
+
+// console.log(__dirname); // шлях до папки що містить файл
+// console.log(__filename); // шлях до файл що запущено
+
+// console.log(module);
