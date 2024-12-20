@@ -41,3 +41,4 @@ module.exports = {
 }
 
 // console.log(module);
+console.log('MyMath.js');
